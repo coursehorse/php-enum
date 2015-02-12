@@ -59,11 +59,11 @@ abstract class Enum
      * Get the name of the enumerator
      *
      * @return string
-     * @see getName()
+     * @see getValue()
      */
     public function __toString()
     {
-        return $this->getName();
+        return $this->getValue();
     }
 
     /**
