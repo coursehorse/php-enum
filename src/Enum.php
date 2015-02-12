@@ -76,24 +76,6 @@ abstract class Enum
     }
 
     /**
-     * @throws LogicException Enums are not serializable
-     *                        because instances are implemented as singletons
-     */
-    final public function __sleep()
-    {
-        throw new LogicException('Enums are not serializable');
-    }
-
-    /**
-     * @throws LogicException Enums are not serializable
-     *                        because instances are implemented as singletons
-     */
-    final public function __wakeup()
-    {
-        throw new LogicException('Enums are not serializable');
-    }
-
-    /**
      * Get the value of the enumerator
      *
      * @return null|bool|int|float|string
@@ -146,7 +128,7 @@ abstract class Enum
      */
     final public function is($enumerator)
     {
-        return $this === $enumerator || $this->value === $enumerator;
+        return $this == $enumerator || $this->value == $enumerator;
     }
 
     /**
